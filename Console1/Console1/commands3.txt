@@ -1,3 +1,4 @@
  load "commands2.txt"
+ load "commands1.txt"
  if(a==1) plot "data.txt" using 1:2 with lines
  reread

@@ -10,8 +10,10 @@ program main
     write(1,*) 'set title "GNUFOR plot" '
     write(1,*) 'set xlabel "x" '
     write(1,*) 'set ylabel "y" '
+    write(1,*) 'set grid'
+    write(1,*) 'set log y'
     close(1)
-    CALL system('gnuplot commands1.txt')
+    !CALL system('gnuplot commands1.txt')
     
     !--------------------------------------------------------------------------!
     
@@ -24,6 +26,7 @@ program main
     
     open ( unit = 3, file = "commands3.txt")
     write(3,*) 'load "commands2.txt"' 
+    write(3,*) 'load "commands1.txt"'
     write(3,*) 'if(a==1) plot "data.txt" using 1:2 with lines'
     write(3,*) 'reread'
     close(3) 
@@ -35,7 +38,7 @@ program main
     open ( unit = 4, file = "data.txt")
     do i = 1, n
         x(i) = i
-        y(i) = sin(x(i))
+        y(i) = x(i)**2
         
         write ( 4, * ) x(i), y(i)
         

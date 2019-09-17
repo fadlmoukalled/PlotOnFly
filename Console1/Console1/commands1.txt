@@ -1,3 +1,5 @@
  set title "GNUFOR plot" 
  set xlabel "x" 
  set ylabel "y" 
+ set grid
+ set log y
