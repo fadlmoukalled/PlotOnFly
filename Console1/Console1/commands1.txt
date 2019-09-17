@@ -2,4 +2,6 @@
  set xlabel "x" 
  set ylabel "y" 
  set grid
- set log y
+ load "commands2.txt" 
+ if(a==1) plot for [i=1:5] "data.txt" using 1:i with lines title columnheader(i)
+ reread
