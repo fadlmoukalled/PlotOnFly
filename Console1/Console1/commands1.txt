@@ -1,0 +1,3 @@
+ set title "GNUFOR plot" 
+ set xlabel "x" 
+ set ylabel "y" 
